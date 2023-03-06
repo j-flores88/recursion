@@ -7,3 +7,12 @@ const fibs = (n) => {
     }
     return fibArr
 }
+
+// ASSIGNMENT 1.2 - FIBONACCI RECURSION
+const fibsRec = (n) => {
+    if(n === 0) return [0];
+    if(n === 1) return [0, 1];
+    const fibArr = fibs(n-1);
+    fibArr.push(fibArr[fibArr.length-1] + fibArr[fibArr.length-2]);
+    return fibArr;
+}
